@@ -1,9 +1,4 @@
-# Aula 1 — O Filtro de Wiener: o alvo dos filtros adaptativos
-
-**Curso:** Introdução aos Filtros Adaptativos
-**Duração sugerida:** 100 min (2 × 50 min)
-**Pré-requisitos:** estatística descritiva, correlação, álgebra linear básica (autovalores), convolução discreta
-**Ferramentas:** MATLAB R2023b ou mais recente, com *Signal Processing Toolbox* (`xcorr`, `toeplitz`) e *DSP System Toolbox* (usada na próxima aula, `dsp.LMSFilter`)
+# O Filtro de Wiener
 
 ---
 
