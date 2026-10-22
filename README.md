@@ -452,27 +452,18 @@ A recíproca não vale: o Kalman trata o **transitório**, a **inicialização**
 
 ## 10. Exercícios propostos
 
-**E1 (analítico).** Para $L=1$, mostre que $w_o = r_{dx}(0)/r_x(0)$ e $J_{\min} = \sigma_d^2\left(1 - \rho_{dx}^2\right)$, em que $\rho_{dx}$ é o coeficiente de correlação entre $d$ e $x$. Interprete.
+**E1 (MATLAB).** Na Prática 1, varie $N \in \{50, 200, 1000, 10^4\}$ e trace $\|\mathbf{w}-\mathbf{h}\|$ e $J_{\min}$ em função de $N$ (média sobre 200 realizações). O que acontece com o erro de estimação quando $N$ é pequeno?
 
-**E2 (analítico).** Seja $x(n)$ branco com variância $\sigma_x^2$ e $d(n) = \sum_{k=0}^{M-1} h_k\,x(n-k) + v(n)$, com $v(n)$ branco independente de $x$. Mostre que, para $L \ge M$, $\mathbf{w}_o = [\mathbf{h}^{\mathsf T}\ \mathbf{0}^{\mathsf T}]^{\mathsf T}$ e $J_{\min} = \sigma_v^2$.
+**E2 (MATLAB).** Na Prática 2, varie o parâmetro $a$ do AR(1) em $\{0{,}1; 0{,}5; 0{,}9; 0{,}99\}$ e trace $\chi(\mathbf{R})$ em função de $a$. Compare com a fórmula $(1+a)/(1-a)$.
 
-**E3 (analítico).** Verifique que $J(\mathbf{w}) = J_{\min} + (\mathbf{w}-\mathbf{w}_o)^{\mathsf T}\mathbf{R}(\mathbf{w}-\mathbf{w}_o)$ partindo da expressão da seção 4.1.
-
-**E4 (MATLAB).** Na Prática 1, varie $N \in \{50, 200, 1000, 10^4\}$ e trace $\|\mathbf{w}-\mathbf{h}\|$ e $J_{\min}$ em função de $N$ (média sobre 200 realizações). O que acontece com o erro de estimação quando $N$ é pequeno?
-
-**E5 (MATLAB).** Na Prática 2, varie o parâmetro $a$ do AR(1) em $\{0{,}1; 0{,}5; 0{,}9; 0{,}99\}$ e trace $\chi(\mathbf{R})$ em função de $a$. Compare com a fórmula $(1+a)/(1-a)$.
-
-**E6 (MATLAB).** Na Prática 3, estime o EQM mínimo em função de $L \in \{1, \dots, 12\}$. A partir de qual $L$ o ganho deixa de ser relevante? Relacione com o comprimento de $\mathbf{g}$.
-
-**E7 (reflexão).** Por que o filtro de Wiener da Prática 3 não consegue cancelar uma interferência que seja **correlacionada com $s(n)$**? O que isso diz sobre a escolha do sensor de referência?
+**E3 (MATLAB).** Na Prática 3, estime o EQM mínimo em função de $L \in \{1, \dots, 12\}$. A partir de qual $L$ o ganho deixa de ser relevante? Relacione com o comprimento de $\mathbf{g}$.
 
 ---
 
 ## 11. Referências
 
-- S. Haykin, *Adaptive Filter Theory*, 5ª ed., Pearson, 2014. (Caps. 2 e 3: filtragem de Wiener e superfície de erro.)
+- S. Haykin, *Adaptive Filter Theory*, 5ª ed., Pearson, 2014.
 - A. H. Sayed, *Adaptive Filters*, Wiley-IEEE Press, 2008.
-- T. Kailath, A. H. Sayed e B. Hassibi, *Linear Estimation*, Prentice Hall, 2000. (Conexão Wiener–Kalman.)
+- T. Kailath, A. H. Sayed e B. Hassibi, *Linear Estimation*, Prentice Hall, 2000.
 - B. D. O. Anderson e J. B. Moore, *Optimal Filtering*, Dover, 2005.
 - P. S. R. Diniz, *Adaptive Filtering: Algorithms and Practical Implementation*, 5ª ed., Springer, 2020.
-- Documentação MATLAB: [`xcorr`](https://www.mathworks.com/help/signal/ref/xcorr.html), [`toeplitz`](https://www.mathworks.com/help/matlab/ref/toeplitz.html), [`dsp.LMSFilter`](https://www.mathworks.com/help/dsp/ref/dsp.lmsfilter-system-object.html).
