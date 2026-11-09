@@ -440,7 +440,7 @@ graph TD
 - **RLS:** resolve recursivamente as equações normais de mínimos quadrados, convergindo mais rápido, com custo $\mathcal{O}(L^2)$.
 - **Kalman:** o RLS é um caso particular do filtro de Kalman quando o vetor de coeficientes é modelado como estado.
 
-### A relação Wiener–Kalman (para fechar a aula, em 5 min)
+### A relação Wiener–Kalman
 
 Para modelos **invariantes no tempo e processos estacionários**, o ganho de Kalman converge, em regime permanente, para um valor constante que é solução da equação algébrica de Riccati, e o filtro resultante coincide com o filtro de Wiener causal. Logo:
 
